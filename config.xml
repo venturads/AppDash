@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.venturads.albert.SolidworksHelper" version="2.1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Solidworks Helper</name>
+<widget id="com.venturads.AppDash" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>App Dash</name>
     <description>
-        Solidworks Helper step by step tutorial.
+        App Dash test app.
     </description>
     <author email="apps@venturads.com" href="https://venturads.com">
         Venturads.com Team
