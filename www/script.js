@@ -229,48 +229,23 @@ document.getElementById("root").innerHTML = "<div class='loader'></div>";
       content: "Metal Inert Gas",
       url: "img/24.jpg",
       urlToImage: "img/24.jpg"
-    },{
-      id: 2044,
-      title: "Mating3",
-      content: "Seated Workbench",
-      url: "img/25.jpg",
-      urlToImage: "img/25.jpg"
-    },  {
-      id: 2045,
-      title: "Shell Cavity",
-      content: "Mill Direction",
-      url: "img/26.jpg",
-      urlToImage: "img/26.jpg"
-    },{
-      id: 2046,
-      title: "Centroid",
-      content: "Cutting Speeds",
-      url: "img/27.jpg",
-      urlToImage: "img/27.jpg"
-    },{
-      id: 2047,
-      title: "Hot Keys",
-      content: "Decimal Chart",
-      url: "img/28.jpg",
-      urlToImage: "img/28.jpg"
-    },{
-      id: 2048,
-      title: "Insert Image",
-      content: "Rpm",
-      url: "img/29.jpg",
-      urlToImage: "img/29.jpg"
     }
   ];
   let list = "";
   console.log("mylist: " + data[0].title);
   for(let i=0;i<data.length;i++){
-    list += "<div class='btn-group-justified content'><a  type='button' class='btn btn-info sharp' id='settings' data-toggle='collapse' data-target='#demo" + data[i].id + "'>" +  data[i].title + "</a></div><div id='demo" +  data[i].id + "' class='collapse'><img src='" + data[i].url + "' width='100%' ></div></div>";
-  document.getElementById('root').innerHTML = list;
+    // list += "<div class='mdl-navigation__link content'><a type='button' class='btn btn-info sharp' id='settings' data-toggle='collapse' data-target='#demo" + data[i].id + "'>" +  data[i].title + "</a></div><div id='demo" +  data[i].id + "' class='collapse'><img src='" + data[i].url + "' width='100%' ></div></div>";
+
+    list += "<a class='mdl-navigation__link' href='' type='button' id='content-menu' class='btn btn-primary sharp'>" +  data[i].title + "</a></br>";
+
+  document.getElementById('content-app').innerHTML = list;
 }
   
 }
 
 document.getElementById('content-app').addEventListener('click', getData);
+
+getData();
   
 // more menu list
   function getMenu (){
