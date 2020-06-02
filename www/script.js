@@ -83,7 +83,7 @@ function getGar (){
 function getData (){
   // const n2 = 'https://venturads.com/helper-menu.json';
 
-document.getElementById("root").innerHTML = "<div class='loader'></div>";
+document.getElementById("content-app").innerHTML = "<div class='loader'></div>";
   let data=[
     {
       id: 2020,
@@ -232,18 +232,25 @@ document.getElementById("root").innerHTML = "<div class='loader'></div>";
     }
   ];
   let list = "";
-  console.log("mylist: " + data[0].title);
+  //console.log("mylist: " + data[0].title);
   for(let i=0;i<data.length;i++){
     // list += "<div class='mdl-navigation__link content'><a type='button' class='btn btn-info sharp' id='settings' data-toggle='collapse' data-target='#demo" + data[i].id + "'>" +  data[i].title + "</a></div><div id='demo" +  data[i].id + "' class='collapse'><img src='" + data[i].url + "' width='100%' ></div></div>";
 
-    list += "<a class='mdl-navigation__link' href='' type='button' id='content-menu' class='btn btn-primary sharp'>" +  data[i].title + "</a></br>";
-
+    list += "<a class='mdl-navigation__link' type='button' id=" + data[i].id + " class='btn btn-primary sharp'>" +  data[i].title + "</a></br>";
+    console.log(data[i].id);
+    function getImage() {
+      "<img src='" + data[i].url + "' width='100%' ></div></div>";
+      alert("hello");
+      console.log(data[i].id);
+    }
+    //alert("hello");
+    document.getElementById('root').addEventListener('click', getImage);
   document.getElementById('content-app').innerHTML = list;
 }
   
 }
 
-document.getElementById('content-app').addEventListener('click', getData);
+//document.getElementById('content-app').addEventListener('click', getData);
 
 getData();
   
@@ -283,7 +290,7 @@ getData();
   }
     
   }
-  document.getElementById('content-menu').addEventListener('click', getMenu);
+  //document.getElementById('content-menu').addEventListener('click', getMenu);
 
   //admob id script
   function onDeviceReady() {
