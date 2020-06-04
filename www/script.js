@@ -207,25 +207,17 @@ document.getElementById("content-app").innerHTML = "<div class='loader'></div>";
     }
   ];
   let list = "";
-  //console.log("mylist: " + data[0].title);
   for(let i=0;i<data.length;i++){
-    // list += "<div class='mdl-navigation__link content'><a type='button' class='btn btn-info sharp' id='settings' data-toggle='collapse' data-target='#demo" + data[i].id + "'>" +  data[i].title + "</a></div><div id='demo" +  data[i].id + "' class='collapse'><img src='" + data[i].url + "' width='100%' ></div></div>";
-
     list += "<a class='mdl-navigation__link' type='button' id=" + data[i].id + " class='btn btn-primary sharp'>" +  data[i].title + "</a></br>";
-    console.log(data[i].id);
+    document.getElementById('content-app').innerHTML = list;
+  }
+  for(let i=0;i<data.length;i++){ 
     function getImage() {
-      "<img src='" + data[i].url + "' width='100%' ></div></div>";
-      //alert("hello");
-      console.log("get image id" + data[i].id);
+      document.getElementById('root').innerHTML = "<img src='" + data[i].url + "' width='100%' ></div></div>";
     }
-    //alert("hello");
-    document.getElementById('root').addEventListener('click', getImage);
-  document.getElementById('content-app').innerHTML = list;
+    document.getElementById(data[i].id).addEventListener('click', getImage);
+  }
 }
-  
-}
-
-//document.getElementById('content-app').addEventListener('click', getData);
 
 getData();
 

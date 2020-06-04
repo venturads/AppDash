@@ -39,7 +39,7 @@ body{
 #root{
   z-index: 9;
   position: relative;
-  /* top: 34px; */
+  width: 100%;
   color: white;
 }
 .sharp{
