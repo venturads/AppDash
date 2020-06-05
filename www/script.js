@@ -3,11 +3,11 @@ function getHome() {
   document.getElementById('root').innerHTML = "<img src='./img/earth.gif' width='100%' ></div></div>";
 }
 document.getElementById('home-btn').addEventListener('click', getHome);
-
+document.getElementById('demo-avatar').addEventListener('click', getHome);
 // more menu list
 function getData (){
   // const n2 = 'https://venturads.com/helper-menu.json';
-
+  getHome();
 document.getElementById("content-app").innerHTML = "<div class='loader'></div>";
   let data=[
     {
@@ -174,7 +174,6 @@ getData();
   //admob id script
   function onDeviceReady() {
     document.removeEventListener('deviceready', onDeviceReady, false);
-
     // Set AdMobAds options:
     admob.setOptions({
         publisherId:          "ca-app-pub-3864996818231266/7648520433",  // Required
