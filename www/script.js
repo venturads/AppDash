@@ -1,6 +1,6 @@
 //go home page
 function getHome() {
-  document.getElementById('root').innerHTML = "<img src='./img/earth.gif' width='100%' ></div></div>";
+  document.getElementById('root').innerHTML = "<img src='./img/welding.gif' width='100%' ></div></div>";
 }
 document.getElementById('home-btn').addEventListener('click', getHome);
 document.getElementById('demo-avatar').addEventListener('click', getHome);
